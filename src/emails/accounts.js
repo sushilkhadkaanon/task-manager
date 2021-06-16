@@ -5,7 +5,7 @@ const emailTransporter = nodemailer.createTransport({
     service: "gmail",
     secure:true,
     auth: {
-      user: "sushil.khadka.anon@gmail.com",
+      user: "developer.sushil.khadka@gmail.com",
       pass: process.env.GMAIL_AUTH_PASSWORD
     },
   });
@@ -33,7 +33,7 @@ const cancelEmail = (email,name)=>{
 
     emailTransporter.sendMail({
 
-        from: 'Sushil Khadka <sushil.khadka.anon@gmail.com',
+        from: 'Sushil Khadka <developer.sushil.khadka@gmail.com',
         to: email,
         subject: 'GoodBye! ',
         text: `Hi, ${name}. Is there anything that we could have done to keep you onboard?`,
